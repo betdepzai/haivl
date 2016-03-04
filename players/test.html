@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body{
+		font-family: open sans;
+		width: 68%;
+	}
+	a{
+		color:white;
+		text-decoration: none;
+	}
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .image-block {
+	text-align: center;
+}
+.owl-carousel .readmore {
+	padding-top: 10px;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url("http://joomla.vinagecko.net/e/images/grabbing.png") 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+.owl-carousel .image {
+	position: relative;
+	    height: 114px;
+    overflow: hidden;
+}
+.owl-carousel .play {
+	background: url("http://joomla.vinagecko.net/e/modules/mod_vina_carousel_youtube/assets/images/play.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	display: none;
+}
+.owl-carousel .image:hover img {
+	opacity: 0.5;
+}
+.owl-carousel .image:hover .play {
+	display: block;
+}
+.owl-carousel .title {
+	margin: 8px 0 0;
+    padding: 0;
+}
+.owl-carousel .length {
+	background-color: #000;
+    bottom: 0;
+    color: #fff;
+    opacity: 0.75;
+    padding: 0 4px;
+    position: absolute;
+    right: 0;
+	font-weight: bold;
+	margin: 5px;
+}
+.owl-carousel .info {
+	font-style: italic;
+    margin-top: 5px;
+}
+.vina-carousel-youtube img {
+	max-width: 100%;
+	margin-top: -20px;
+}
+#vina-carousel-youtube391 {
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 10px 5px;
+    background: url(http://joomla.vinagecko.net/e/images/sampledata/bg_25.jpg) repeat scroll 0 0;
+    background-color: #cccccc;
+    overflow: hidden;
+}
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #869791;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center
+}
+/*kay: nav_left_home update*/
+.nav_left_home {
+  position: absolute;
+  top: 0;
+  left: -155px;
+  text-align: left;
+  color: #fff;
+  width: 150px;
+  z-index: 200;
+  background: #FFF;
+  display: block;
+}
+
+.nav_left_home {
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+.sticky-right-box {
+    left: 0;
+}
+.nav_left_home #scrolltop_home {
+    background: #eee;
+    text-align: center
+}
+
+.nav_left_home a.btnToTop {
+    padding: 7px;
+    font-weight: 700;
+    font-size: 19px
+}
+.nav_left_home li {
+    border-bottom: 1px solid #eee
+}
+
+.nav_left_home li:hover {
+    background: #eee
+}
+.nav_left_home li.active {
+    background: #eee
+}
+.nav_left_home li a {
+    color: #585858;
+    display: block;
+    font-size: 13px;
+    height: 100%;
+    overflow: hidden;
+    padding: 6px 7px 6px 1px;
+    white-space: nowrap;
+    font-weight: 700;
+    width: 100%
+}
+</style>
+
+
+
+
+</head>
+
+<body class="site com_content view-article no-layout no-task itemid-435">
+
+<div class="fix-nav-left-home scroll-to-fixed-fixed" style="z-index: 1000; position: fixed; top: 10px; margin-left: 0px; width: 728px;">
+        <div class="nav_left_home">
+            <div id="scrolltop_home">
+                <a href="#" class="btnToTop" style="display: block;" title="Đầu trang"><i class="fa fa-angle-up"></i></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="http://haynhucnhoi.tv" title="Trang chủ" style="color:#ff6b00">
+                        <i class="fa-fw fa fa-angle-right"></i>Trang chủ
+                    </a>
+                </li>
+                                                                  <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/video-clip-ban-thang-bong-da" title="Bàn Thắng Bóng Đá">
+                                    <i class="fa-fw fa fa-angle-right"></i>Bàn Thắng Bóng Đá                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/camera-canh-giac" title="Camera Cảnh Giác">
+                                    <i class="fa-fw fa fa-angle-right"></i>Camera Cảnh Giác                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/khoa-hoc-thuong-thuc" title="Khoa Học Thường Thức">
+                                    <i class="fa-fw fa fa-angle-right"></i>Khoa Học Thường Thức                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/hoy-di-nha" title="Series: Vậy Hoy Đi Nha">
+                                    <i class="fa-fw fa fa-angle-right"></i>Series: Vậy Hoy Đi Nha                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/playlist-nhac-hay" title="Playlist Nhạc Hay">
+                                    <i class="fa-fw fa fa-angle-right"></i>Playlist Nhạc Hay                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/truyen-che" title="Hình Chế/Truyện Chế">
+                                    <i class="fa-fw fa fa-angle-right"></i>Hình Chế/Truyện Chế                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/hot" title="Clip Hay Nhức Nhói">
+                                    <i class="fa-fw fa fa-angle-right"></i>Clip Hay Nhức Nhói                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/video" title="Clip Hot Facebook">
+                                    <i class="fa-fw fa fa-angle-right"></i>Clip Hot Facebook                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/girl-xinh" title="Girl Xinh">
+                                    <i class="fa-fw fa fa-angle-right"></i>Girl Xinh                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/hai-hoai-linh-tran-thanh-truong-giang" title="Hoài Linh/Trấn Thành">
+                                    <i class="fa-fw fa fa-angle-right"></i>Hoài Linh/Trấn Thành                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/tv-show" title="TV Show">
+                                    <i class="fa-fw fa fa-angle-right"></i>TV Show                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/kenh-hai-hot" title="FAPtv/Mì Gõ/Nghịch">
+                                    <i class="fa-fw fa fa-angle-right"></i>FAPtv/Mì Gõ/Nghịch                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/phim-hoat-hinh" title="Phim Hoạt Hình">
+                                    <i class="fa-fw fa fa-angle-right"></i>Phim Hoạt Hình                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/co-the-ban-chua-biet" title="Có Thể Bạn Chưa Biết">
+                                    <i class="fa-fw fa fa-angle-right"></i>Có Thể Bạn Chưa Biết                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/video-lien-minh-huyen-thoai" title="Liên Minh Huyền Thoại">
+                                    <i class="fa-fw fa fa-angle-right"></i>Liên Minh Huyền Thoại                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/goc-chi-em" title="Góc Chị Em">
+                                    <i class="fa-fw fa fa-angle-right"></i>Góc Chị Em                                </a>
+                            </li>
+                                                  </ul>
+        </div>
+        </div>
+        <div style="display: none; width: 728px; height: 0px; float: none;"></div>
+        <script type="text/javascript">
+
+    $(document).ready(function(){
+        calculateMenu = function($isShown) {
+            var menu = $('.nav_left_home');
+            var stickyRight = $('.sticky-right-box');
+            var menuWidth = menu.outerWidth();
+            var rightWidth = stickyRight.outerWidth();
+            var container = $('#container');
+            var containerWidth = container.width();
+            var spaceFromContainer = 5;
+            var screenWidth = $(window).width();
+            if ($isShown) {
+                var display = 'block';
+            } else {
+                display = 'none';
+            }
+//            menu.css({
+//                left : (Math.round((screenWidth - containerWidth)/2) - menuWidth - spaceFromContainer) + 'px',
+//                display : display
+//            });
+//            stickyRight.css({
+//                left : (Math.round((screenWidth - containerWidth)/2) + containerWidth + spaceFromContainer) + 'px',
+//                display : display
+//            });
+        };
+        displayMenu = function() {
+//            if ($(window).width() > 1349) {
+                calculateMenu(true);
+//            } else {
+//                calculateMenu(false);
+//            }
+        };
+        displayMenu();
+        $(window).resize(function(){
+            displayMenu();
+        });
+    })
+</script>
+<img src="https://i.ytimg.com/vi/ob0qIkvSXic/hqdefault.jpg" height="2000px" width="50px">
+<div class="moduletable">
+						<style type="text/css">
+#vina-carousel-youtube392 {
+	width: auto;
+	height: auto;
+	margin: 0px;
+	padding: 0;
+			overflow: hidden;
+}
+#vina-carousel-youtube392 .item {
+	;
+	color: #333333;
+	padding: 10px;
+	margin: 0 5px;
+}
+#vina-carousel-youtube392 .item a {
+	color: #20b2aa;
+}
+</style>
+<div id="vina-carousel-youtube392" class="vina-carousel-youtube owl-carousel owl-theme" style="opacity: 1; display: block;">
+			<div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 2820px; left: 0px; display: block; transition: all 1000ms ease; transform: translate3d(0px, 0px, 0px);"><div class="owl-item" style="width: 235px;"><div class="item">
+		<!-- video image block -->
+		<div class="image">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/rYEDA3JcQqw?fs=1&amp;autoplay=1" title="Adele - Rolling in the Deep">
+				<img src="http://img.youtube.com/vi/rYEDA3JcQqw/sddefault.jpg" alt="Adele - Rolling in the Deep">
+				<div class="play glow"></div>
+			</a>
+			<!-- video duration block -->
+						<div class="length">3:54</div>
+					</div>
+		
+		<!-- video title block -->
+				<h4 class="title">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/rYEDA3JcQqw?fs=1&amp;autoplay=1" title="Adele - Rolling in the Deep">
+				Adele - Rolling in the Deep			</a>
+		</h4>
+				
+		<!-- video information -->
+				<div class="info">
+			<span class="author">by AdeleVEVO</span>
+			<span class="hits pull-right">739,292,519 views</span>
+		</div>
+			</div></div><div class="owl-item" style="width: 235px;"><div class="item">
+		<!-- video image block -->
+		<div class="image">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/JEFtg8VPGnU?fs=1&amp;autoplay=1" title="The Flash - Comics History 101">
+				<img src="http://img.youtube.com/vi/JEFtg8VPGnU/sddefault.jpg" alt="The Flash - Comics History 101">
+				<div class="play glow"></div>
+			</a>
+			<!-- video duration block -->
+						<div class="length">7:37</div>
+					</div>
+		
+		<!-- video title block -->
+				<h4 class="title">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/JEFtg8VPGnU?fs=1&amp;autoplay=1" title="The Flash - Comics History 101">
+				The Flash - Comics History 101			</a>
+		</h4>
+				
+		<!-- video information -->
+				<div class="info">
+			<span class="author">by IGN</span>
+			<span class="hits pull-right">147,064 views</span>
+		</div>
+			</div></div><div class="owl-item" style="width: 235px;"><div class="item">
+		<!-- video image block -->
+		<div class="image">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/yTCDVfMz15M?fs=1&amp;autoplay=1" title="P!nk - Try">
+				<img src="http://img.youtube.com/vi/yTCDVfMz15M/sddefault.jpg" alt="P!nk - Try">
+				<div class="play glow"></div>
+			</a>
+			<!-- video duration block -->
+						<div class="length">4:10</div>
+					</div>
+		
+		<!-- video title block -->
+				<h4 class="title">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/yTCDVfMz15M?fs=1&amp;autoplay=1" title="P!nk - Try">
+				P!nk - Try			</a>
+		</h4>
+				
+		<!-- video information -->
+				<div class="info">
+			<span class="author">by PinkVEVO</span>
+			<span class="hits pull-right">186,168,479 views</span>
+		</div>
+			</div></div><div class="owl-item" style="width: 235px;"><div class="item">
+		<!-- video image block -->
+		<div class="image">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/YbT0xy_Jai0?fs=1&amp;autoplay=1" title="iPhone 7">
+				<img src="http://img.youtube.com/vi/YbT0xy_Jai0/sddefault.jpg" alt="iPhone 7">
+				<div class="play glow"></div>
+			</a>
+			<!-- video duration block -->
+						<div class="length">1:16</div>
+					</div>
+		
+		<!-- video title block -->
+				<h4 class="title">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/YbT0xy_Jai0?fs=1&amp;autoplay=1" title="iPhone 7">
+				iPhone 7			</a>
+		</h4>
+				
+		<!-- video information -->
+				<div class="info">
+			<span class="author">by Sonitdac</span>
+			<span class="hits pull-right">34,522,848 views</span>
+		</div>
+			</div></div><div class="owl-item" style="width: 235px;"><div class="item">
+		<!-- video image block -->
+		<div class="image">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/nJ3ZM8FDBlg?fs=1&amp;autoplay=1" title="P!nk - Sober">
+				<img src="http://img.youtube.com/vi/nJ3ZM8FDBlg/sddefault.jpg" alt="P!nk - Sober">
+				<div class="play glow"></div>
+			</a>
+			<!-- video duration block -->
+						<div class="length">4:22</div>
+					</div>
+		
+		<!-- video title block -->
+				<h4 class="title">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/nJ3ZM8FDBlg?fs=1&amp;autoplay=1" title="P!nk - Sober">
+				P!nk - Sober			</a>
+		</h4>
+				
+		<!-- video information -->
+				<div class="info">
+			<span class="author">by PinkVEVO</span>
+			<span class="hits pull-right">88,346,416 views</span>
+		</div>
+			</div></div><div class="owl-item" style="width: 235px;"><div class="item">
+		<!-- video image block -->
+		<div class="image">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/FJfFZqTlWrQ?fs=1&amp;autoplay=1" title="P!nk - So What">
+				<img src="http://img.youtube.com/vi/FJfFZqTlWrQ/sddefault.jpg" alt="P!nk - So What">
+				<div class="play glow"></div>
+			</a>
+			<!-- video duration block -->
+						<div class="length">3:46</div>
+					</div>
+		
+		<!-- video title block -->
+				<h4 class="title">
+			<a class="fancybox-media fancybox.iframe" href="https://www.youtube.com/embed/FJfFZqTlWrQ?fs=1&amp;autoplay=1" title="P!nk - So What">
+				P!nk - So What			</a>
+		</h4>
+				
+		<!-- video information -->
+				<div class="info">
+			<span class="author">by PinkVEVO</span>
+			<span class="hits pull-right">166,288,464 views</span>
+		</div>
+			</div></div></div></div>
+			
+			
+			
+			
+			
+	<div class="owl-controls clickable"><div class="owl-pagination"><div class="owl-page active"><span class="owl-numbers">1</span></div><div class="owl-page"><span class="owl-numbers">2</span></div></div></div></div>
+
+
+
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$('#vina-carousel-youtube392 .fancybox-media').fancybox();
+	
+	$("#vina-carousel-youtube392").owlCarousel({
+		items : 			4,
+        itemsDesktop : 		[1170,4],
+        itemsDesktopSmall : [980,3],
+        itemsTablet : 		[800,3],
+        itemsTabletSmall : 	[650,2],
+        itemsMobile : 		[450,1],
+        singleItem : 		false,
+        itemsScaleUp : 		false,
+
+        slideSpeed : 		200,
+        paginationSpeed : 	800,
+        rewindSpeed : 		1000,
+
+        autoPlay : 		true,
+        stopOnHover : 	true,
+
+        navigation : 	false,
+        rewindNav : 	true,
+        scrollPerPage : false,
+
+        pagination : 		true,
+        paginationNumbers : true,
+
+        responsive : 	true,
+        autoHeight : 	false,
+        mouseDrag : 	true,
+        touchDrag : 	true,
+	});
+}); 
+</script>
+		</div>
+</body>
+</html>

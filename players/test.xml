@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:jwplayer="http://developer.longtailvideo.com/trac/" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+  <title>Tears of Steel Trailer</title>
+  <description>Tears of Steel is Blender&#39;s fourth film. A completely open source pipeline was used to produce all visual effects.</description>
+  <link>http://mango.blender.org/</link>
+
+  <item>
+    <title>Cosmos Laundromat - Pilot Trailer</title>
+    <pubDate>Thu, 22 Oct 2015 22:01:00 -0000</pubDate>
+    <description>This is the first bit of the movie we shown to the world, man that was a lot of work! Read the blogpost about it.
+
+Released on May 28th, 2015.</description>
+
+    <media:group>
+      <media:content bitrate="690" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/W7bCjESz-364768.mp4?token=0_5630d85c_0xaa5a6a58c909e0f6dfaaed272b5885035aa1efbd" width="1280" />
+      <media:content bitrate="480" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/W7bCjESz-364767.mp4?token=0_5630d85c_0xeaabcd4d445ab8014ff157b08339730c7b261291" width="960" />
+      <media:content bitrate="310" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/W7bCjESz-1753142.mp4?token=0_5630d85c_0xb2033d75a7ba6b9ca5fe1bda1ca8f74df06582d6" width="640" />
+      <media:content bitrate="270" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/W7bCjESz-364766.mp4?token=0_5630d85c_0xf218610fb399562d711261833b7cc37a9d34d02e" width="480" />
+      <media:content bitrate="200" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/W7bCjESz-364765.mp4?token=0_5630d85c_0x835ab8a647c87843f08c793eedbfcf442bb085a2" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>49.64</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/W7bCjESz-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/W7bCjESz-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender</jwplayer:tags>
+    <jwplayer:mediaid>W7bCjESz</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Cosmos Laundromat - First Cycle</title>
+    <pubDate>Thu, 22 Oct 2015 22:01:00 -0000</pubDate>
+    <description>The full first episode (12 minutes)!
+
+On a desolate island, suicidal sheep Franck meets his fate in a quirky salesman, who offers him the gift of a lifetime. Little does he know that he can only handle so much lifetime...
+
+&#34;Cosmos Laundromat&#34; started in 2014 as an experimental feature film, in which an adventurous and absurdist love story is being told by multiple teams - each working in their own unique style. The opening of the film, the 10 minutes pilot &#34;First Cycle&#34;, has been made in the Netherlands by the studio of Blender Institute in Amsterdam.
+
+The film itself and all of the artwork files were made with free/open source software and are available under a permissive license. Free to share, free to remix and free to learn from.</description>
+
+    <media:group>
+      <media:content bitrate="1510" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/TQjoCPTk-364768.mp4?token=0_5630d85c_0x9203697ea3beefdac29eed1254f1055661484847" width="1280" />
+      <media:content bitrate="970" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/TQjoCPTk-364767.mp4?token=0_5630d85c_0x262cee7256e2ac7a3e3fd7dbb989dd8a1ab28564" width="960" />
+      <media:content bitrate="560" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/TQjoCPTk-1753142.mp4?token=0_5630d85c_0x71f38f07a288e542752677a21a7845bf3210e02c" width="640" />
+      <media:content bitrate="460" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/TQjoCPTk-364766.mp4?token=0_5630d85c_0xfe5ecc243b0d257d9e0e34392df891e764571c7a" width="480" />
+      <media:content bitrate="300" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/TQjoCPTk-364765.mp4?token=0_5630d85c_0x2c9f0363fbfe5eb17653ca9ab9602d7f8d917610" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>730.60</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/TQjoCPTk-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/TQjoCPTk-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender</jwplayer:tags>
+    <jwplayer:mediaid>TQjoCPTk</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Blender Painting Tutorial</title>
+    <pubDate>Thu, 22 Oct 2015 22:01:00 -0000</pubDate>
+    <description></description>
+
+    <media:group>
+      <media:content bitrate="310" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/N6USOzmw-364767.mp4?token=0_5630d85c_0xc8dd6c751fb1557809f78c581eccc1d363ad433c" width="960" />
+      <media:content bitrate="230" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/N6USOzmw-1753142.mp4?token=0_5630d85c_0xbd78dd1bd86f0cc1296ffeb6335aa711c01296ba" width="640" />
+      <media:content bitrate="210" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/N6USOzmw-364766.mp4?token=0_5630d85c_0x73051d4269f8584b37f87cd6e11c60aebc99a208" width="480" />
+      <media:content bitrate="170" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/N6USOzmw-364765.mp4?token=0_5630d85c_0xdf86d765f879fe34ac0d2baa61705943bd820951" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>5300.13</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/N6USOzmw-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/N6USOzmw-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender</jwplayer:tags>
+    <jwplayer:mediaid>N6USOzmw</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Blender Game Asset Creation</title>
+    <pubDate>Thu, 22 Oct 2015 22:01:00 -0000</pubDate>
+    <description></description>
+
+    <media:group>
+      <media:content bitrate="840" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/hz31DE0g-364768.mp4?token=0_5630d85c_0x2d4e88fc36316a890650bfa7f96630f1e037dcac" width="1280" />
+      <media:content bitrate="590" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/hz31DE0g-364767.mp4?token=0_5630d85c_0x118dc43897fb384c315a73a9125e6846207145b2" width="960" />
+      <media:content bitrate="400" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/hz31DE0g-1753142.mp4?token=0_5630d85c_0x77bf82a0405f478308962c69901313166f159db5" width="640" />
+      <media:content bitrate="360" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/hz31DE0g-364766.mp4?token=0_5630d85c_0xacbe7ff957e5208cce35075496fc9c034dc72ff3" width="480" />
+      <media:content bitrate="260" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/hz31DE0g-364765.mp4?token=0_5630d85c_0x992cde25bd4c56785785ed77b71e4f37f174f9a2" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>57.25</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/hz31DE0g-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/hz31DE0g-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender</jwplayer:tags>
+    <jwplayer:mediaid>hz31DE0g</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Cosmos Laundromat</title>
+    <link>https://gooseberry.blender.org/</link>
+    <pubDate>Sun, 27 Sep 2015 14:30:00 -0000</pubDate>
+    <description>Cosmos Laundromat is the 5th open-source movie project by the Blender Institute.</description>
+
+    <media:group>
+      <media:content bitrate="3160" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/jqErKmBL-1703854.mp4?token=0_5630d85c_0x7138f1dfcd47ed6340b2a88068c49a57aebfe1c8" width="1920" />
+      <media:content bitrate="1510" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/jqErKmBL-364768.mp4?token=0_5630d85c_0x0ecbaff60803cecde0fe2df8681c408b4f27fa62" width="1280" />
+      <media:content bitrate="970" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/jqErKmBL-364767.mp4?token=0_5630d85c_0x6c19aa50ca1898521d97e166c228bfb71e59f0d2" width="960" />
+      <media:content bitrate="560" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/jqErKmBL-1753142.mp4?token=0_5630d85c_0xa501f87dfd2c088ebfe9898358c30a8b047430de" width="640" />
+      <media:content bitrate="460" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/jqErKmBL-364766.mp4?token=0_5630d85c_0x0a1c629ed491b0141b7c11c751bf1af3a99fbea4" width="480" />
+      <media:content bitrate="300" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/jqErKmBL-364765.mp4?token=0_5630d85c_0x0d5f4fd4e3cfddcf042c90833f2b2ac560d7592b" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:captions.file>http://assets-jpcust.jwpsrv.com/tracks/jRgRCdPO.vtt</jwplayer:captions.file>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:ccTopics>{u&#39;Internal Organs&#39;: {}, u&#39;Lungs&#39;: {}, u&#39;Respiratory System (anatomy)&#39;: {}, u&#39;Coughing&#39;: {}, u&#39;Respiration Diseases&#39;: {}, u&#39;Diseases, Syndromes, and Disorders&#39;: {}}</jwplayer:ccTopics>
+    <jwplayer:ccAdwords>{u&#39;Music&#39;: {}}</jwplayer:ccAdwords>
+    <jwplayer:ccLanguage>en</jwplayer:ccLanguage>
+    <jwplayer:duration>730.60</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/jqErKmBL-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/jqErKmBL-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender</jwplayer:tags>
+    <jwplayer:mediaid>jqErKmBL</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Cosmos Laundromat Trailer</title>
+    <pubDate>Sun, 27 Sep 2015 14:09:00 -0000</pubDate>
+    <description>Cosmos Laundromat is the 5th open-source movie project by the Blender Institute.</description>
+
+    <media:group>
+      <media:content bitrate="1610" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/4ZQ5PQ9d-1703854.mp4?token=0_5630d85c_0x21335a8c706e77f433d2f8a83318488212eb613e" width="1920" />
+      <media:content bitrate="870" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/4ZQ5PQ9d-364768.mp4?token=0_5630d85c_0x885301a0b4dc06348c2ec386c81bd57cfacea197" width="1280" />
+      <media:content bitrate="600" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/4ZQ5PQ9d-364767.mp4?token=0_5630d85c_0x6bf2146f5847be8a8232d76cfe2a9dd728e9ec22" width="960" />
+      <media:content bitrate="370" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/4ZQ5PQ9d-1753142.mp4?token=0_5630d85c_0x2c43833637231096dffba26bef91dabcd0f8c4f8" width="640" />
+      <media:content bitrate="320" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/4ZQ5PQ9d-364766.mp4?token=0_5630d85c_0xf45293721be58b6e5903e1a7e4ccdf9aa5bfdb80" width="480" />
+      <media:content bitrate="230" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/4ZQ5PQ9d-364765.mp4?token=0_5630d85c_0xc244841bb60210782f9923c2965c37eb3e3c13cb" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>22.84</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/M9VV4fmB-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/M9VV4fmB-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender, trailers</jwplayer:tags>
+    <jwplayer:mediaid>M9VV4fmB</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Theodorou vs Manawaroa</title>
+    <pubDate>Wed, 02 Apr 2014 19:09:52 -0000</pubDate>
+    <description></description>
+
+    <media:group>
+      <media:content bitrate="1060" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/FWArScen-364767.mp4?token=0_5630d85c_0xf1dbeec0b41fadaf2ac20f93c4753254fec40591" width="720" />
+      <media:content bitrate="910" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/FWArScen-1753142.mp4?token=0_5630d85c_0x9b2a6f49990b0fae344582dccc70e36e7894177b" width="640" />
+      <media:content bitrate="480" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/FWArScen-364765.mp4?token=0_5630d85c_0x4862b0b327aed81e55efa5443c81a4bda434ef29" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>1152.10</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/FWArScen-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/FWArScen-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>trailers</jwplayer:tags>
+    <jwplayer:mediaid>FWArScen</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Bisping vs Kennedy</title>
+    <pubDate>Wed, 02 Apr 2014 19:01:52 -0000</pubDate>
+    <description>Bisping vs. Kennedy live ultimate fighters championship series</description>
+
+    <media:group>
+      <media:content bitrate="920" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/pkRivk3k-1753142.mp4?token=0_5630d85c_0x6d15fe896877e8783c3b7361a0c932fe4ad80f1a" width="640" />
+      <media:content bitrate="480" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/pkRivk3k-364765.mp4?token=0_5630d85c_0x52661fad8d7ba439ffeb378b43189d96a610962d" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>814.34</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/pkRivk3k-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/pkRivk3k-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>trailers</jwplayer:tags>
+    <jwplayer:mediaid>pkRivk3k</jwplayer:mediaid>
+  </item>
+  <item>
+    <title>Tears of Steel</title>
+    <link>http://mango.blender.org/</link>
+    <pubDate>Mon, 01 Oct 2012 12:41:00 -0000</pubDate>
+    <description>Tears of Steel is Blender&#39;s fourth film. A completely open source pipeline was used to produce all visual effects.</description>
+
+    <media:group>
+      <media:content bitrate="3390" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/21ETjILN-1703854.mp4?token=0_5630d85c_0xab62534dc75f4b473a9228090628c4336ac8e400" width="1920" />
+      <media:content bitrate="1700" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/21ETjILN-364768.mp4?token=0_5630d85c_0xba3a8aea318421f2c4cdc713c6c8b24b81909282" width="1280" />
+      <media:content bitrate="660" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/21ETjILN-1753142.mp4?token=0_5630d85c_0x7f7aa4b5109002e69d2b50f8ded811287c828081" width="640" />
+      <media:content bitrate="370" url="http://jwpsrv.a.ssl.fastly.net/content/conversions/zWLy8Jer/videos/21ETjILN-364765.mp4?token=0_5630d85c_0xc5cabf2e327e258ecb7a393b12abe690119eb74c" width="320" />
+    </media:group>
+    <jwplayer:http.startparam>ec_seek</jwplayer:http.startparam>
+    <jwplayer:captions.file>http://assets-jpcust.jwpsrv.com/tracks/fk1Aby4S.srt</jwplayer:captions.file>
+    <jwplayer:provider>http</jwplayer:provider>
+    <jwplayer:duration>733.95</jwplayer:duration>
+    <jwplayer:image>http://assets-jpcust.jwpsrv.com/thumbs/vM7nH0Kl-720.jpg</jwplayer:image>
+    <jwplayer:playlist.image>http://assets-jpcust.jwpsrv.com/thumbs/vM7nH0Kl-120.jpg</jwplayer:playlist.image>
+    <jwplayer:tags>blender</jwplayer:tags>
+    <jwplayer:mediaid>vM7nH0Kl</jwplayer:mediaid>
+  </item>
+</channel>
+</rss>

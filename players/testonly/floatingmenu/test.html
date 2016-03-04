@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Floating menu CSS</title>
+	<meta charset="UTF-8" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style type="text/css">
+body{
+    font-family: Open sans;
+    line-height: 1.5;
+}
+/*kay: nav_left_home update*/
+.nav_left_home {
+  position: absolute;
+  top: 0;
+  
+  text-align: left;
+  color: #fff;
+  width: 150px;
+  z-index: 200;
+  background: #FFF;
+  display: block;
+}
+.nav_left_home ul{
+    padding-left: 0px;
+        margin-top: 0px;
+}
+.fa-angle-up{
+    color: black;
+}
+.nav_left_home ul li{
+    padding-left: 5px;
+}
+.nav_left_home ul li a{
+    text-decoration: none;
+    font-size: 11px;
+    }
+
+.nav_left_home {
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+.sticky-right-box {
+    left: 0;
+}
+.nav_left_home #scrolltop_home {
+    background: #FFF;
+    text-align: center;
+    border-bottom: 2px solid #E42D32;
+}
+
+.nav_left_home a.btnToTop {
+    padding: 7px;
+    font-weight: 700;
+    font-size: 19px
+}
+.nav_left_home li {
+    border-bottom: 1px solid #eee
+}
+
+.nav_left_home li:hover {
+    background: #eee
+}
+.nav_left_home li.active {
+    background: #eee
+}
+.nav_left_home li a {
+    color: #585858;
+    display: block;
+    font-size: 13px;
+    height: 100%;
+    overflow: hidden;
+    padding: 6px 7px 6px 1px;
+    white-space: nowrap;
+    font-weight: 700;
+    width: 100%
+}
+</style>
+</head>
+<body style="height:3000px;">
+<div class="fix-nav-left-home scroll-to-fixed-fixed" style="z-index: 1000; position: fixed; top: 10px; margin-left: 0px; width: 728px;">
+        <div class="nav_left_home">
+            <div id="scrolltop_home">
+                <a href="#" class="btnToTop" style="display: block;" title="Đầu trang"><i class="fa fa-angle-up"></i></a>
+            </div>
+            <ul>
+                <li>
+                    <a href="http://haynhucnhoi.tv" title="Trang chủ" style="color:#E42D32">
+                        <i class="fa-fw fa fa-angle-right"></i>Trang chủ
+                    </a>
+                </li>
+                                                                  <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/video-clip-ban-thang-bong-da" title="Bàn Thắng Bóng Đá">
+                                    <i class="fa-fw fa fa-angle-right"></i>Bàn Thắng Bóng Đá                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/camera-canh-giac" title="Camera Cảnh Giác">
+                                    <i class="fa-fw fa fa-angle-right"></i>Camera Cảnh Giác                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/khoa-hoc-thuong-thuc" title="Khoa Học Thường Thức">
+                                    <i class="fa-fw fa fa-angle-right"></i>Khoa Học Thường Thức                                </a>
+                            
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/tv-show" title="TV Show">
+                                    <i class="fa-fw fa fa-angle-right"></i>TV Show                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/kenh-hai-hot" title="FAPtv/Mì Gõ/Nghịch">
+                                    <i class="fa-fw fa fa-angle-right"></i>FAPtv/Mì Gõ/Nghịch                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/phim-hoat-hinh" title="Phim Hoạt Hình">
+                                    <i class="fa-fw fa fa-angle-right"></i>Phim Hoạt Hình                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/co-the-ban-chua-biet" title="Có Thể Bạn Chưa Biết">
+                                    <i class="fa-fw fa fa-angle-right"></i>Có Thể Bạn Chưa Biết                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/video-lien-minh-huyen-thoai" title="Liên Minh Huyền Thoại">
+                                    <i class="fa-fw fa fa-angle-right"></i>Liên Minh Huyền Thoại                                </a>
+                            </li>
+                                                                                        <li>
+                                <a href="http://haynhucnhoi.tv/chu-de/goc-chi-em" title="Góc Chị Em">
+                                    <i class="fa-fw fa fa-angle-right"></i>Góc Chị Em                                </a>
+                            </li>
+                                                  </ul>
+        </div>
+        </div>
+        <div style="display: none; width: 728px; height: 0px; float: none;"></div>
+        <script type="text/javascript">
+
+    $(document).ready(function(){
+        calculateMenu = function($isShown) {
+            var menu = $('.nav_left_home');
+            var stickyRight = $('.sticky-right-box');
+            var menuWidth = menu.outerWidth();
+            var rightWidth = stickyRight.outerWidth();
+            var container = $('#container');
+            var containerWidth = container.width();
+            var spaceFromContainer = 5;
+            var screenWidth = $(window).width();
+            if ($isShown) {
+                var display = 'block';
+            } else {
+                display = 'none';
+            }
+//            menu.css({
+//                left : (Math.round((screenWidth - containerWidth)/2) - menuWidth - spaceFromContainer) + 'px',
+//                display : display
+//            });
+//            stickyRight.css({
+//                left : (Math.round((screenWidth - containerWidth)/2) + containerWidth + spaceFromContainer) + 'px',
+//                display : display
+//            });
+        };
+        displayMenu = function() {
+//            if ($(window).width() > 1349) {
+                calculateMenu(true);
+//            } else {
+//                calculateMenu(false);
+//            }
+        };
+        displayMenu();
+        $(window).resize(function(){
+            displayMenu();
+        });
+    })
+</script>
+
+</body>
+</html>
