@@ -361,7 +361,8 @@ function list_categories_display_item($item, &$all_children, $level = 0, $option
 	// href
 	if(_SEOMOD == 1) 
 	{
-		$caturl = _URL."/browse-". $item['tag'] ."-videos-1-date.html";
+		//$caturl = _URL."/browse-". $item['tag'] ."-videos-1-date.html";
+		$caturl = _URL."/". $item['tag'] ."/";
 	}
 	else
 	{
@@ -3354,7 +3355,7 @@ function make_cats($cat_ids) {
 		{
 			if(_SEOMOD == 1)
 			{
-				$links .= "<a href=\""._URL."/browse-".$c['tag']."-videos-1-date.html\">".$c['name']."</a> ";
+				$links .= "<a href=\""._URL."/".$c['tag']."/\">".$c['name']."</a> ";
 			}
 			else
 			{
@@ -3546,10 +3547,16 @@ function make_link($type = '', $args = array())
 		
 			if (_SEOMOD)
 			{
-				$url .= 'browse-'. $args['tag'] .'-videos-'; 
+				/*$url .= 'browse-'. $args['tag'] .'-videos-'; 
 				$url .= ($args['page'] != '') ? $args['page'] : '1';
 				$url .= ($args['sortby'] != '') ? '-'. $args['sortby'] : '-date';
 				$url .= '.html';
+				*/
+				$url .= $args['tag'] ."/"; 
+				$url .= ($args['page'] != '') ? 'trang-'.$args['page'] : 'trang-1';
+				$url .= ($args['sortby'] != '') ? '/'. $args['sortby'] : '/date';
+				//$url .= '.html';
+
 			}
 			else
 			{
@@ -3578,8 +3585,8 @@ function make_link($type = '', $args = array())
 			
 			if (_SEOMOD)
 			{
-				$url .= 'tags/'. $args['tag'];
-				$url .= ($args['page'] != '') ? '/page-'. $args['page'] .'/' : '';
+				$url .= 'video/'. $args['tag'];
+				$url .= ($args['page'] != '') ? '/trang-'. $args['page'] .'/' : '';
 			}
 			else
 			{
@@ -3657,7 +3664,7 @@ function makevideolink($uniq_id, $video_title = '', $video_slug = '')
 		}
 		$video_title_clean = sanitize_title($url_part);
 		
-		$return = _URL .'/'. $video_title_clean .'_'. $uniq_id .'.html';
+		$return = _URL .'/'. $video_title_clean  .'.html';
 	} 
 	else 
 	{
@@ -4261,7 +4268,7 @@ function get_video_tags($uniq_id = '', $make_links = 1)
 		{
 			if(_SEOMOD == 1)
 			{
-				$tags[$id]['href'] = "<a href=\""._URL."/tags/".$row['safe_tag']."/\">".$row['tag']."</a>";
+				$tags[$id]['href'] = "<a href=\""._URL."/video/".$row['safe_tag']."/\">".$row['tag']."</a>";
 			}
 			else
 			{
@@ -4331,7 +4338,7 @@ function tag_cloud($randomize = 0, $limit = 15, $shuffle = 1)
 			$size = round($min_size + (($tag['numvids'] - $min) * $step));
 			
 			if(_SEOMOD)
-				$tags[ $tag_id ]['href'] = "<a href=\""._URL."/tags/".$tag['safe_tag']."/\" class=\"tag_cloud_link\" style=\"font-size:".$size."px;\">".$tag['tag']."</a> ";
+				$tags[ $tag_id ]['href'] = "<a href=\""._URL."/video/".$tag['safe_tag']."/\" class=\"tag_cloud_link\" style=\"font-size:".$size."px;\">".$tag['tag']."</a> ";
 			else
 				$tags[ $tag_id ]['href'] = "<a href=\""._URL."/tag.php?t=".$tag['safe_tag']."\" class=\"tag_cloud_link\" style=\"font-size:".$size."px;\">".$tag['tag']."</a> ";		
 		}

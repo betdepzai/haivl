@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.20, created on 2016-02-09 15:12:42
+<?php /* Smarty version 2.6.20, created on 2016-03-05 11:20:11
          compiled from video-new.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'get_advanced_video_list', 'video-new.tpl', 6, false),)), $this); ?>
-<?php $this->_cache_serials['/home/admin/domains/hipmat.com/public_html/Smarty/templates_c/%%26^269^269879B4%%video-new.tpl.inc'] = '6ca88dd644b8874f1261724e7a2ef1f4'; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
+<?php $this->_cache_serials['C:\xampp\htdocs\haivl/Smarty/templates_c\%%26^269^269879B4%%video-new.tpl.inc'] = '99f052690ed39713ee23e0aa7f0511f3'; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => "header.tpl", 'smarty_include_vars' => array('p' => 'general','tpl_name' => "video-new")));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
@@ -11,7 +11,7 @@ unset($_smarty_tpl_vars);
 
 <div class="post-list-t1 cover">
 	<div class="row no-gutter">
-    <?php if ($this->caching && !$this->_cache_including): echo '{nocache:6ca88dd644b8874f1261724e7a2ef1f4#0}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','tag' => 'Hot','limit' => 5), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:6ca88dd644b8874f1261724e7a2ef1f4#0}'; endif;?>
+    <?php if ($this->caching && !$this->_cache_including): echo '{nocache:99f052690ed39713ee23e0aa7f0511f3#0}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','tag' => 'Hot','limit' => 5), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:99f052690ed39713ee23e0aa7f0511f3#0}'; endif;?>
 
         <?php $_from = $this->_tpl_vars['advanced_video_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['video_data']):

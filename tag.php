@@ -32,9 +32,23 @@ $from = $page * $limit - ($limit);
 $total_results = 0;
 $err = '';
 
-$tag = urldecode(trim($_GET['t']));
-$tag = str_replace( array("%", "<", ">", '"', "'", '&'), '', $tag);
+$tag = urldecode(trim($_GET['cat']));
 
+if(isset($_GET['page'])){
+	$tag = str_replace("category.php/", "", $tag);
+}else{
+	$tmp = explode("/",$tag);	
+	if(isset($tmp[2])){	
+		$tag = $tmp[1];
+		$tmp = explode('-', end($tmp));		
+		$page = $tmp[1];
+	}else{	
+		$tag = str_replace("video/", "", $tag);
+	}
+}
+$smarty->assign('str_tag', $tag);
+$smarty->assign('pnumber', $page);
+$tag = str_replace( array("%", "<", ">", '"', "'", '&'), '', $tag);
 if($tag != '' && strlen($tag) > 1)
 {
 	$tag = safe_tag($tag);
@@ -120,7 +134,6 @@ if(!empty($page) && $page > 1) {
 $meta_title = sprintf($meta_title, _SITENAME);
 $meta_description = $meta_title;
 // end
-
 $smarty->assign('tags', $tag_cloud);
 $smarty->assign('error_msg', $err);
 $smarty->assign('searchstring', htmlspecialchars($real_tag));

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2016-03-04 08:13:04
+<?php /* Smarty version 2.6.20, created on 2016-03-05 11:19:55
          compiled from player.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'lower', 'player.tpl', 429, false),)), $this); ?>
@@ -1733,4 +1733,4 @@ unset($_smarty_tpl_vars);
 	<?php endif; ?>
 <?php endif; ?>
 
-<?php endif; ?>
+<?php endif; ?>

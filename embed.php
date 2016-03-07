@@ -1,4 +1,5 @@
 <?php
+die('123');
 session_start();
 
 define('IGNORE_MOBILE', true);

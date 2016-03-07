@@ -199,7 +199,8 @@ class Smarty
      *
      * @var integer
      */
-    var $php_handling    =  SMARTY_PHP_PASSTHRU;
+    //var $php_handling    =  SMARTY_PHP_PASSTHRU;
+    var $php_handling    =  SMARTY_PHP_ALLOW;
 
     /**
      * This enables template security. When enabled, many things are restricted

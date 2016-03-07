@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.20, created on 2016-03-04 08:13:02
+<?php /* Smarty version 2.6.20, created on 2016-03-05 16:39:36
          compiled from header.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'default', 'header.tpl', 73, false),array('modifier', 'escape', 'header.tpl', 90, false),array('function', 'dropdown_menu_video_categories', 'header.tpl', 321, false),array('function', 'dropdown_menu_article_categories', 'header.tpl', 329, false),)), $this); ?>
-<?php $this->_cache_serials['/var/www/html/haivl/Smarty/templates_c/%%F7^F7F^F7F34188%%header.tpl.inc'] = 'ad3fe4d5615632fe183e317437f7a934'; ?>﻿<!DOCTYPE html>
+<?php $this->_cache_serials['C:\xampp\htdocs\haivl/Smarty/templates_c\%%F7^F7F^F7F34188%%header.tpl.inc'] = '6478a889539edcc86a7fdd68e5b839f7'; ?>﻿<!DOCTYPE html>
 <!--[if IE 7 | IE 8]>
 <html class="ie" dir="<?php if (@_IS_RTL == '1'): ?>rtl<?php else: ?>ltr<?php endif; ?>">
 <![endif]-->
@@ -347,7 +347,6 @@ var pm_video_data = {
 	  <?php if ($this->_tpl_vars['_custom_logo_url'] != ''): ?>
 		<div class="pm-logo-image">
 			<a href="<?php echo @_URL; ?>
-/index.<?php echo @_FEXT; ?>
 " rel="home"><img src="<?php echo $this->_tpl_vars['_custom_logo_url']; ?>
 " alt="<?php echo ((is_array($_tmp=@_SITENAME)) ? $this->_run_mod_handler('escape', true, $_tmp) : smarty_modifier_escape($_tmp)); ?>
 " title="<?php echo ((is_array($_tmp=@_SITENAME)) ? $this->_run_mod_handler('escape', true, $_tmp) : smarty_modifier_escape($_tmp)); ?>
@@ -355,7 +354,6 @@ var pm_video_data = {
 		</div>
 	  <?php else: ?>
       	<h1 class="site-title"><a href="<?php echo @_URL; ?>
-/index.<?php echo @_FEXT; ?>
 " rel="home"><?php echo @_SITENAME; ?>
 </a></h1>
 	  <?php endif; ?>
@@ -524,7 +522,6 @@ unset($_smarty_tpl_vars);
                     <ul class="nav">
                     
                       <li><a href="<?php echo @_URL; ?>
-/index.<?php echo @_FEXT; ?>
 " class="wide-nav-link"><?php echo $this->_tpl_vars['lang']['homepage']; ?>
 </a></li>
                       <li class="dropdown">
@@ -549,7 +546,7 @@ unset($_smarty_tpl_vars);
                         <a href="#" class="dropdown-toggle wide-nav-link" data-toggle="dropdown"><?php echo $this->_tpl_vars['lang']['articles']; ?>
  <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                        <?php if ($this->caching && !$this->_cache_including): echo '{nocache:ad3fe4d5615632fe183e317437f7a934#0}'; endif;echo smarty_art_html_list_categories(array('max_levels' => 3), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:ad3fe4d5615632fe183e317437f7a934#0}'; endif;?>
+                        <?php if ($this->caching && !$this->_cache_including): echo '{nocache:6478a889539edcc86a7fdd68e5b839f7#0}'; endif;echo smarty_art_html_list_categories(array('max_levels' => 3), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:6478a889539edcc86a7fdd68e5b839f7#0}'; endif;?>
 
                         </ul>
                       </li>

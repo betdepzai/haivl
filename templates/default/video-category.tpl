@@ -3,6 +3,8 @@
 <div id="wrapper">
 <!-- Grid banner -->
 <div >
+
+{if $gv_pagenumber==1}
 <div class="post-list-t1 cover">
 	<div class="row no-gutter">
     {get_advanced_video_list assignto="advanced_video_list" category_id=$cat_id featured="1" limit=5}
@@ -47,6 +49,7 @@
 
                 	</div>
 </div>
+{/if}
 </div>
 
 <!-- Grid banner -->
@@ -66,13 +69,13 @@
             <ul class="dropdown-menu pull-right">
             {if $smarty.const._SEOMOD == '1'}
             <li {if $gv_sortby == 'date'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-date.html" rel="nofollow">{$lang.date}</a></li>
+            <a href="{$smarty.const._URL}/{$gv_cat}/trang-{$gv_pagenumber}/date" rel="nofollow">{$lang.date}</a></li>
             <li {if $gv_sortby == 'views'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-views.html" rel="nofollow">{$lang.views}</a></li>
+            <a href="{$smarty.const._URL}/{$gv_cat}/trang-{$gv_pagenumber}/views" rel="nofollow">{$lang.views}</a></li>
             <li {if $gv_sortby == 'rating'}class="active"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-rating.html" rel="nofollow">{$lang.rating}</a></li>
+            <a href="{$smarty.const._URL}/{$gv_cat}/trang-{$gv_pagenumber}/rating" rel="nofollow">{$lang.rating}</a></li>
             <li {if $gv_sortby == 'title'}class="active"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-title.html" rel="nofollow">{$lang.title}</a></li>
+            <a href="{$smarty.const._URL}/{$gv_cat}/trang-{$gv_pagenumber}/title" rel="nofollow">{$lang.title}</a></li>
             {else}
             <li {if $gv_sortby == 'date'}class="selected"{/if}>
             <a href="{$smarty.const._URL}/category.php?cat={$gv_cat}&page={$gv_pagenumber}&sortby=date" rel="nofollow">{$lang.date}</a></li>

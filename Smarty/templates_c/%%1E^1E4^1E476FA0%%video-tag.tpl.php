@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.20, created on 2016-02-09 14:51:19
+<?php /* Smarty version 2.6.20, created on 2016-03-07 13:27:48
          compiled from video-tag.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'get_advanced_video_list', 'video-tag.tpl', 8, false),)), $this); ?>
-<?php $this->_cache_serials['/home/admin/domains/hipmat.com/public_html/Smarty/templates_c/%%1E^1E4^1E476FA0%%video-tag.tpl.inc'] = '674dc98a1f4d50e2139ec9d2a5da0a1d'; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
+smarty_core_load_plugins(array('plugins' => array(array('function', 'get_advanced_video_list', 'video-tag.tpl', 97, false),)), $this); ?>
+<?php $this->_cache_serials['C:\xampp\htdocs\haivl/Smarty/templates_c\%%1E^1E4^1E476FA0%%video-tag.tpl.inc'] = 'bab0b1baef41c63421b83a0a521257dd'; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array('p' => 'general')));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
@@ -11,61 +11,8 @@ unset($_smarty_tpl_vars);
 <div id="wrapper">
 <!-- Grid banner -->
 <div >
-<div class="post-list-t1 cover">
-	<div class="row no-gutter">
-    <?php if ($this->caching && !$this->_cache_including): echo '{nocache:674dc98a1f4d50e2139ec9d2a5da0a1d#0}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','category_id' => $this->_tpl_vars['cat_id'],'featured' => '1','limit' => 5), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:674dc98a1f4d50e2139ec9d2a5da0a1d#0}'; endif;?>
 
-        <?php $_from = $this->_tpl_vars['advanced_video_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
-    foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['video_data']):
-?>
-			<?php if ($this->_tpl_vars['k'] == 0): ?>
-        		<div class="col-md-6 col-sm-12">
-			<div class="badge-grid-item item hero clearfix list-headline">
-				<a class="badge-evt img-container" href="<?php echo $this->_tpl_vars['video_data']['video_href']; ?>
-">
-					<div class="responsivewrapper" style="background: url('<?php echo $this->_tpl_vars['video_data']['thumb_img_url']; ?>
-') center; background-size: cover;">
-					</div>
-					<div class="img-shadow">
-					</div>
-				</a>
-				<div class="info">
-					<a class="badge-evt title" href="<?php echo $this->_tpl_vars['video_data']['video_href']; ?>
-">
-						<h4><?php echo $this->_tpl_vars['video_data']['video_title']; ?>
-</h4>
-					</a>
-				</div>
-			</div><!-- / item -->
-		</div>
-			
-	        <?php else: ?>    
-        
-		<div class="col-md-3 col-sm-6">
-			<div class="badge-grid-item item clearfix list-headline">
-				<a class="badge-evt img-container" href="<?php echo $this->_tpl_vars['video_data']['video_href']; ?>
-">
-					<div class="responsivewrapper" style="background: url('<?php echo $this->_tpl_vars['video_data']['thumb_img_url']; ?>
-') center; background-size: cover;">
-					</div>
-					<div class="img-shadow"></div>
-				</a>
-				<div class="info">
-				    <a class="badge-evt title" href="<?php echo $this->_tpl_vars['video_data']['video_href']; ?>
-">
-					    <h4><?php echo $this->_tpl_vars['video_data']['video_title']; ?>
-</h4>
-				    </a>
-			    </div>
-		    </div><!-- / item -->
-		</div>
-			<?php endif; ?>
-         <?php endforeach; endif; unset($_from); ?>       
-        
-		
 
-                	</div>
-</div>
 </div>
 
 <!-- Grid banner -->
@@ -79,68 +26,8 @@ unset($_smarty_tpl_vars);
             <div class="btn-group btn-group-sort">
             <button class="btn btn-small" id="list"><i class="icon-th"></i> </button>
             <button class="btn btn-small" id="grid"><i class="icon-th-list"></i> </button>
-            <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" data-target="#" href="">
-            <?php if ($this->_tpl_vars['gv_sortby'] == ''): ?><?php echo $this->_tpl_vars['lang']['sorting']; ?>
-<?php endif; ?> <?php if ($this->_tpl_vars['gv_sortby'] == 'date'): ?><?php echo $this->_tpl_vars['lang']['date']; ?>
-<?php endif; ?><?php if ($this->_tpl_vars['gv_sortby'] == 'views'): ?><?php echo $this->_tpl_vars['lang']['views']; ?>
-<?php endif; ?><?php if ($this->_tpl_vars['gv_sortby'] == 'rating'): ?><?php echo $this->_tpl_vars['lang']['rating']; ?>
-<?php endif; ?><?php if ($this->_tpl_vars['gv_sortby'] == 'title'): ?><?php echo $this->_tpl_vars['lang']['title']; ?>
-<?php endif; ?>
-            <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu pull-right">
-            <?php if (@_SEOMOD == '1'): ?>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'date'): ?>class="selected"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--date.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['date']; ?>
-</a></li>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'views'): ?>class="selected"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--views.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['views']; ?>
-</a></li>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'rating'): ?>class="active"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--rating.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['rating']; ?>
-</a></li>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'title'): ?>class="active"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--title.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['title']; ?>
-</a></li>
-            <?php else: ?>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'date'): ?>class="selected"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/category.php?cat=<?php echo $this->_tpl_vars['gv_cat']; ?>
-&page=<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
-&sortby=date" rel="nofollow"><?php echo $this->_tpl_vars['lang']['date']; ?>
-</a></li>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'views'): ?>class="selected"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/category.php?cat=<?php echo $this->_tpl_vars['gv_cat']; ?>
-&page=<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
-&sortby=views" rel="nofollow"><?php echo $this->_tpl_vars['lang']['views']; ?>
-</a></li>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'rating'): ?>class="selected"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/category.php?cat=<?php echo $this->_tpl_vars['gv_cat']; ?>
-&page=<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
-&sortby=rating" rel="nofollow"><?php echo $this->_tpl_vars['lang']['rating']; ?>
-</a></li>
-            <li <?php if ($this->_tpl_vars['gv_sortby'] == 'title'): ?>class="selected"<?php endif; ?>>
-            <a href="<?php echo @_URL; ?>
-/category.php?cat=<?php echo $this->_tpl_vars['gv_cat']; ?>
-&page=<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
-&sortby=title" rel="nofollow"><?php echo $this->_tpl_vars['lang']['title']; ?>
-</a></li>
-			<?php endif; ?>
-            </ul>
+          
+            
             </div>
             <?php if ($this->_tpl_vars['gv_category_description']): ?>
 			<div class="pm-browse-desc">
@@ -261,7 +148,7 @@ unset($_smarty_tpl_vars);
           <div id="pm-tabs" class="tab-content">
             <div class="tab-pane fade in active" id="bestincategory2">
                 <ul class="pm-ul-top-videos">
-                <?php if ($this->caching && !$this->_cache_including): echo '{nocache:674dc98a1f4d50e2139ec9d2a5da0a1d#1}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','limit' => 7), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:674dc98a1f4d50e2139ec9d2a5da0a1d#1}'; endif;?>
+                <?php if ($this->caching && !$this->_cache_including): echo '{nocache:bab0b1baef41c63421b83a0a521257dd#0}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','limit' => 7), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:bab0b1baef41c63421b83a0a521257dd#0}'; endif;?>
 
                 <?php $_from = $this->_tpl_vars['advanced_video_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['related_video_data']):

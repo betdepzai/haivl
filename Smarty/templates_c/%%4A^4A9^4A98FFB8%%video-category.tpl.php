@@ -1,8 +1,8 @@
-<?php /* Smarty version 2.6.20, created on 2016-02-09 14:05:08
+<?php /* Smarty version 2.6.20, created on 2016-03-05 15:28:27
          compiled from video-category.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'get_advanced_video_list', 'video-category.tpl', 8, false),)), $this); ?>
-<?php $this->_cache_serials['/home/admin/domains/hipmat.com/public_html/Smarty/templates_c/%%4A^4A9^4A98FFB8%%video-category.tpl.inc'] = '5012a5fa4efe4a979f3fd07a8834fc76'; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
+smarty_core_load_plugins(array('plugins' => array(array('function', 'get_advanced_video_list', 'video-category.tpl', 10, false),)), $this); ?>
+<?php $this->_cache_serials['C:\xampp\htdocs\haivl/Smarty/templates_c\%%4A^4A9^4A98FFB8%%video-category.tpl.inc'] = 'e9a57afde1bcbcae39945d1cb7eeeb91'; ?><?php $_smarty_tpl_vars = $this->_tpl_vars;
 $this->_smarty_include(array('smarty_include_tpl_file' => 'header.tpl', 'smarty_include_vars' => array('p' => 'general','tpl_name' => "video-category")));
 $this->_tpl_vars = $_smarty_tpl_vars;
 unset($_smarty_tpl_vars);
@@ -11,9 +11,11 @@ unset($_smarty_tpl_vars);
 <div id="wrapper">
 <!-- Grid banner -->
 <div >
+
+<?php if ($this->_tpl_vars['gv_pagenumber'] == 1): ?>
 <div class="post-list-t1 cover">
 	<div class="row no-gutter">
-    <?php if ($this->caching && !$this->_cache_including): echo '{nocache:5012a5fa4efe4a979f3fd07a8834fc76#0}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','category_id' => $this->_tpl_vars['cat_id'],'featured' => '1','limit' => 5), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:5012a5fa4efe4a979f3fd07a8834fc76#0}'; endif;?>
+    <?php if ($this->caching && !$this->_cache_including): echo '{nocache:e9a57afde1bcbcae39945d1cb7eeeb91#0}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','category_id' => $this->_tpl_vars['cat_id'],'featured' => '1','limit' => 5), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:e9a57afde1bcbcae39945d1cb7eeeb91#0}'; endif;?>
 
         <?php $_from = $this->_tpl_vars['advanced_video_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['video_data']):
@@ -66,6 +68,7 @@ unset($_smarty_tpl_vars);
 
                 	</div>
 </div>
+<?php endif; ?>
 </div>
 
 <!-- Grid banner -->
@@ -92,27 +95,27 @@ unset($_smarty_tpl_vars);
             <?php if (@_SEOMOD == '1'): ?>
             <li <?php if ($this->_tpl_vars['gv_sortby'] == 'date'): ?>class="selected"<?php endif; ?>>
             <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--date.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['date']; ?>
+/<?php echo $this->_tpl_vars['gv_cat']; ?>
+/trang-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
+/date" rel="nofollow"><?php echo $this->_tpl_vars['lang']['date']; ?>
 </a></li>
             <li <?php if ($this->_tpl_vars['gv_sortby'] == 'views'): ?>class="selected"<?php endif; ?>>
             <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--views.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['views']; ?>
+/<?php echo $this->_tpl_vars['gv_cat']; ?>
+/trang-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
+/views" rel="nofollow"><?php echo $this->_tpl_vars['lang']['views']; ?>
 </a></li>
             <li <?php if ($this->_tpl_vars['gv_sortby'] == 'rating'): ?>class="active"<?php endif; ?>>
             <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--rating.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['rating']; ?>
+/<?php echo $this->_tpl_vars['gv_cat']; ?>
+/trang-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
+/rating" rel="nofollow"><?php echo $this->_tpl_vars['lang']['rating']; ?>
 </a></li>
             <li <?php if ($this->_tpl_vars['gv_sortby'] == 'title'): ?>class="active"<?php endif; ?>>
             <a href="<?php echo @_URL; ?>
-/browse-<?php echo $this->_tpl_vars['gv_cat']; ?>
--videos-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
--title.html" rel="nofollow"><?php echo $this->_tpl_vars['lang']['title']; ?>
+/<?php echo $this->_tpl_vars['gv_cat']; ?>
+/trang-<?php echo $this->_tpl_vars['gv_pagenumber']; ?>
+/title" rel="nofollow"><?php echo $this->_tpl_vars['lang']['title']; ?>
 </a></li>
             <?php else: ?>
             <li <?php if ($this->_tpl_vars['gv_sortby'] == 'date'): ?>class="selected"<?php endif; ?>>
@@ -273,7 +276,7 @@ unset($_smarty_tpl_vars);
           <div id="pm-tabs" class="tab-content">
             <div class="tab-pane fade in active" id="bestincategory2">
                 <ul class="pm-ul-top-videos">
-                <?php if ($this->caching && !$this->_cache_including): echo '{nocache:5012a5fa4efe4a979f3fd07a8834fc76#1}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','category_id' => $this->_tpl_vars['cat_id'],'order_by' => 'site_views','days_ago' => 12,'limit' => 6), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:5012a5fa4efe4a979f3fd07a8834fc76#1}'; endif;?>
+                <?php if ($this->caching && !$this->_cache_including): echo '{nocache:e9a57afde1bcbcae39945d1cb7eeeb91#1}'; endif;echo smarty_get_advanced_video_list(array('assignto' => 'advanced_video_list','category_id' => $this->_tpl_vars['cat_id'],'order_by' => 'site_views','days_ago' => 12,'limit' => 6), $this);if ($this->caching && !$this->_cache_including): echo '{/nocache:e9a57afde1bcbcae39945d1cb7eeeb91#1}'; endif;?>
 
                 <?php $_from = $this->_tpl_vars['advanced_video_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
     foreach ($_from as $this->_tpl_vars['k'] => $this->_tpl_vars['related_video_data']):

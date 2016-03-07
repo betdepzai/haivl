@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2016-02-09 14:05:08
+<?php /* Smarty version 2.6.20, created on 2016-03-05 15:12:24
          compiled from user-auth-login-form.tpl */ ?>
 <form class="form-horizontal" name="login_form" id="login-form" method="post" action="<?php echo @_URL; ?>
 /login.php">

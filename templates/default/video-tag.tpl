@@ -3,50 +3,8 @@
 <div id="wrapper">
 <!-- Grid banner -->
 <div >
-<div class="post-list-t1 cover">
-	<div class="row no-gutter">
-    {get_advanced_video_list assignto="advanced_video_list" category_id=$cat_id featured="1" limit=5}
-        {foreach from=$advanced_video_list key=k item=video_data}
-			{if $k==0}
-        		<div class="col-md-6 col-sm-12">
-			<div class="badge-grid-item item hero clearfix list-headline">
-				<a class="badge-evt img-container" href="{$video_data.video_href}">
-					<div class="responsivewrapper" style="background: url('{$video_data.thumb_img_url}') center; background-size: cover;">
-					</div>
-					<div class="img-shadow">
-					</div>
-				</a>
-				<div class="info">
-					<a class="badge-evt title" href="{$video_data.video_href}">
-						<h4>{$video_data.video_title}</h4>
-					</a>
-				</div>
-			</div><!-- / item -->
-		</div>
-			
-	        {else}    
-        
-		<div class="col-md-3 col-sm-6">
-			<div class="badge-grid-item item clearfix list-headline">
-				<a class="badge-evt img-container" href="{$video_data.video_href}">
-					<div class="responsivewrapper" style="background: url('{$video_data.thumb_img_url}') center; background-size: cover;">
-					</div>
-					<div class="img-shadow"></div>
-				</a>
-				<div class="info">
-				    <a class="badge-evt title" href="{$video_data.video_href}">
-					    <h4>{$video_data.video_title}</h4>
-				    </a>
-			    </div>
-		    </div><!-- / item -->
-		</div>
-			{/if}
-         {/foreach}       
-        
-		
 
-                	</div>
-</div>
+
 </div>
 
 <!-- Grid banner -->
@@ -59,31 +17,8 @@
             <div class="btn-group btn-group-sort">
             <button class="btn btn-small" id="list"><i class="icon-th"></i> </button>
             <button class="btn btn-small" id="grid"><i class="icon-th-list"></i> </button>
-            <a class="btn btn-small dropdown-toggle" data-toggle="dropdown" data-target="#" href="">
-            {if $gv_sortby == ''}{$lang.sorting}{/if} {if $gv_sortby == 'date'}{$lang.date}{/if}{if $gv_sortby == 'views'}{$lang.views}{/if}{if $gv_sortby == 'rating'}{$lang.rating}{/if}{if $gv_sortby == 'title'}{$lang.title}{/if}
-            <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu pull-right">
-            {if $smarty.const._SEOMOD == '1'}
-            <li {if $gv_sortby == 'date'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-date.html" rel="nofollow">{$lang.date}</a></li>
-            <li {if $gv_sortby == 'views'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-views.html" rel="nofollow">{$lang.views}</a></li>
-            <li {if $gv_sortby == 'rating'}class="active"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-rating.html" rel="nofollow">{$lang.rating}</a></li>
-            <li {if $gv_sortby == 'title'}class="active"{/if}>
-            <a href="{$smarty.const._URL}/browse-{$gv_cat}-videos-{$gv_pagenumber}-title.html" rel="nofollow">{$lang.title}</a></li>
-            {else}
-            <li {if $gv_sortby == 'date'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/category.php?cat={$gv_cat}&page={$gv_pagenumber}&sortby=date" rel="nofollow">{$lang.date}</a></li>
-            <li {if $gv_sortby == 'views'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/category.php?cat={$gv_cat}&page={$gv_pagenumber}&sortby=views" rel="nofollow">{$lang.views}</a></li>
-            <li {if $gv_sortby == 'rating'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/category.php?cat={$gv_cat}&page={$gv_pagenumber}&sortby=rating" rel="nofollow">{$lang.rating}</a></li>
-            <li {if $gv_sortby == 'title'}class="selected"{/if}>
-            <a href="{$smarty.const._URL}/category.php?cat={$gv_cat}&page={$gv_pagenumber}&sortby=title" rel="nofollow">{$lang.title}</a></li>
-			{/if}
-            </ul>
+          
+            
             </div>
             {if $gv_category_description}
 			<div class="pm-browse-desc">

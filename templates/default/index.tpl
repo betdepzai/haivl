@@ -30,7 +30,7 @@
 					</div>
 				{elseif $featured_videos_total > 1}
 				<div id="pm-featured" class="border-radius3">
-					<h2 class="upper-blue">{$lang._feat}</h2>
+					<h2 class="upper-blue">{$lang._feat}</h2>						
 						<div class="row-fluid row-featured">
 							<div class="pm-featured-highlight">
 								<a href="{$featured_videos.0.video_href}" class="play-button"></a>
@@ -41,7 +41,7 @@
 									<img src="{$featured_videos.0.thumb_img_url}" width="100%" height="100%" class="pm-featured-highlight-img" />
 								</a>
 							</div>
-
+							
 							<div class="pm-featured-sidelist">
 								<ul class="pm-ul-featured-videos" id="pm-ul-featured">
 									{foreach from=$featured_videos key=k item=featured_video_data}

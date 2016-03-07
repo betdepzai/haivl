@@ -22,6 +22,13 @@ require_once('include/islogged.php');
 require_once('include/rating_functions.php');
 
 $postAlias = getVideoSlug($_SERVER['REQUEST_URI']);
+
+if(strpos($postAlias, '_') > 0){	
+	$tmp = explode("_", $postAlias);
+	Header( "HTTP/1.1 301 Moved Permanently" ); 
+	Header( "Location: http://".$_SERVER['SERVER_NAME']."/".$tmp[0].".html"); 
+	exit();
+}
 $video_uniq_id = getUniqIdBySlug($postAlias);
 
 $playlist_uniq_id = $_GET['playlist'];

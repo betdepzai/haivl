@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2016-02-09 14:06:17
+<?php /* Smarty version 2.6.20, created on 2016-03-05 11:19:55
          compiled from comments.tpl */ ?>
 <?php if ($this->_tpl_vars['allow_comments'] == '1'): ?>
 

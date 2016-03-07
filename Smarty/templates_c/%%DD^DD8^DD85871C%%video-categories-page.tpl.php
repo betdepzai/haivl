@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2016-03-04 08:16:45
+<?php /* Smarty version 2.6.20, created on 2016-03-05 11:29:05
          compiled from video-categories-page.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'smarty_fewchars', 'video-categories-page.tpl', 17, false),)), $this); ?>

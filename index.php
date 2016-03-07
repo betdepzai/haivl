@@ -13,6 +13,12 @@
 // | Developed by: PHPSUGAR (www.phpsugar.com) / support@phpsugar.com
 // | Copyright: (c) 2004-2015 PHPSUGAR. All rights reserved.
 // +------------------------------------------------------------------------+
+//var_dump($_SERVER['REQUEST_URI']);die;
+if(strpos($_SERVER['REQUEST_URI'], ".html") > 0){
+	Header( "HTTP/1.1 301 Moved Permanently" ); 
+	Header( "Location: http://".$_SERVER['SERVER_NAME']); 
+	exit();
+}
 session_start();
 require('config.php');
 if($_POST['select_language'] == 1 || (strcmp($_POST['select_language'],"1") == 0))

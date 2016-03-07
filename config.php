@@ -25,7 +25,7 @@ $db_name = 'haivl';
 $db_user = 'root';
 
 /** MySQL database password */
-$db_pass = 'root';
+$db_pass = '';
 
 /** MySQL hostname */
 $db_host = 'localhost';

@@ -193,10 +193,10 @@ var pm_video_data = {
     <div class="span3">
 	  {if $_custom_logo_url != ''}
 		<div class="pm-logo-image">
-			<a href="{$smarty.const._URL}/index.{$smarty.const._FEXT}" rel="home"><img src="{$_custom_logo_url}" alt="{$smarty.const._SITENAME|escape}" title="{$smarty.const._SITENAME|escape}" border="0" /></a>
+			<a href="{$smarty.const._URL}" rel="home"><img src="{$_custom_logo_url}" alt="{$smarty.const._SITENAME|escape}" title="{$smarty.const._SITENAME|escape}" border="0" /></a>
 		</div>
 	  {else}
-      	<h1 class="site-title"><a href="{$smarty.const._URL}/index.{$smarty.const._FEXT}" rel="home">{$smarty.const._SITENAME}</a></h1>
+      	<h1 class="site-title"><a href="{$smarty.const._URL}" rel="home">{$smarty.const._SITENAME}</a></h1>
 	  {/if}
    </div>
    
@@ -310,7 +310,7 @@ var pm_video_data = {
                   <div class="nav-collapse">
                     <ul class="nav">
                     
-                      <li><a href="{$smarty.const._URL}/index.{$smarty.const._FEXT}" class="wide-nav-link">{$lang.homepage}</a></li>
+                      <li><a href="{$smarty.const._URL}" class="wide-nav-link">{$lang.homepage}</a></li>
                       <li class="dropdown">
                         {if $smarty.const._SEOMOD}
                         <a href="{$smarty.const._URL}/browse.{$smarty.const._FEXT}" class="dropdown-toggle wide-nav-link disabled" data-target="#" role="button" data-toggle="dropdown">{$lang.category} <b class="caret"></b></a>

@@ -13,7 +13,9 @@
 // | Developed by: PHPSUGAR (www.phpsugar.com) / support@phpsugar.com
 // | Copyright: (c) 2004-2013 PHPSUGAR. All rights reserved.
 // +------------------------------------------------------------------------+
-
+if(strpos($_SERVER['REQUEST_URI'], "video/") > 0){
+	include "tag.php";exit();
+}
 session_start();
 require('config.php');
 require_once('include/functions.php');
