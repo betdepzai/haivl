@@ -67,6 +67,7 @@ $subtitles = a_get_video_subtitles($uniq_id);
 
 if($_POST['submit'] != '')
 {
+
 	$stream = false;
 	$input = $c_inc = $c_dec = array();
 	$modframework->trigger_hook('admin_modify_save_start');
@@ -83,7 +84,9 @@ if($_POST['submit'] != '')
 		{
 			$input[$k] = $v;
 		}
-	}
+	}	
+	$input['allow_index'] = (int) $input['allow_index'];	
+
 	if( is_array($_POST['category']) ){
 		$categories = implode(",", $_POST['category']);
 	}
@@ -113,8 +116,12 @@ if($_POST['submit'] != '')
 	}
 
 	$description			=	$input['description'];
+	
+	$description			=	$input['description'];
 	$input['video_title']	=	html_entity_decode($input['video_title']);
 	$input['video_title']	=	str_replace( array("<", ">"), array("&lt;", "&gt;"), $input['video_title']);
+	
+
 	$input['featured'] 		=	(int) $_POST['featured'];
 	$input['allow_comments'] = (int) $_POST['allow_comments'];
 	$input['source_id']		= 	(int) $_POST['source_id'];
@@ -282,6 +289,9 @@ if($_POST['submit'] != '')
 		$input['video_slug'] = $input['video_title'];
 	}
 	$input['video_slug'] = sanitize_title($input['video_slug']);
+	$input['title_tag']	=	$input['title_tag'] ? strip_tags($input['title_tag']) : $input['video_title'];
+	$input['meta_description']	=	$input['meta_description'] ? strip_tags($input['meta_description']) : $description;
+
 
 	$sql = "UPDATE pm_videos 
 			SET video_title = '". $input['video_title'] ."', 
@@ -289,6 +299,9 @@ if($_POST['submit'] != '')
 				submitted = '". $input['submitted'] ."',  
 				category= '". $categories ."', 
 				description = '". $description ."',
+				meta_description = '". $input['meta_description'] ."',
+				title_tag = '". $input['title_tag'] ."',
+				allow_index = '". $input['allow_index'] ."',
 				language = '". $input['language'] ."',
 				video_slug = '". $input['video_slug'] ."'";
 
@@ -1216,7 +1229,7 @@ if($r['added'] > time())
     <div class="permalink-field">
 	
 	<?php if (_SEOMOD) : ?>
-		<strong>Permalink:</strong> <?php echo _URL .'/';?><input class="permalink-input" type="text" name="video_slug" value="<?php echo urldecode($r['video_slug']);?>" /><?php echo  '_'. (($r['uniq_id'] == '') ? 'ID' : $r['uniq_id']) .'.html';?>
+		<strong>Permalink:</strong> <?php echo _URL .'/';?><input class="permalink-input" type="text" name="video_slug" value="<?php echo urldecode($r['video_slug']);?>" />.html
 	<?php endif; ?>	
 	
 	
@@ -1236,6 +1249,25 @@ if($r['added'] > time())
     <textarea name="description" cols="100" id="textarea-WYSIWYG" class="tinymce" style="width:100%"><?php echo $r['description']; ?></textarea>
     <span class="autosave-message">&nbsp;</span>
     </div>
+    </div>
+    <div class="widget border-radius4 shadow-div">
+    
+	    <h4>Title Tag</h4>
+	    <div class="control-group">
+	    	<input name="title_tag" type="text" value="<?php echo $r['title_tag'] ? htmlspecialchars($r['title_tag']) : htmlspecialchars($r['video_title']) ; ?>" style="width: 99%;" />
+	    </div>
+	    <h4>Meta Description</h4>
+	    <div class="controls">
+	    <textarea name="meta_description" class="textarea-embed" cols="100" rows="5" style="width:100%"><?php echo $r['meta_description'] ? $r['meta_description'] : strip_tags($r['description']); ?></textarea>
+	    
+	    </div>
+	    <div class="control-group">
+	    	<label for="allow_index">
+	    	<input name="allow_index" type="checkbox" id="allow_index" value="1" 
+	    	<?php echo $r['allow_index'] == 1  ? "checked" : ""; ?>
+	    	 />
+			Allow index</label>
+	    </div>
     </div>
 
 	<?php if($r['source_id'] == 0 || $r['source_id'] != 1 || $r['source_id'] != 2) : ?>    

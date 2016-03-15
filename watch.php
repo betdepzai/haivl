@@ -145,9 +145,13 @@ $twitter_status .= ' '. makevideolink($video['uniq_id'], $video['video_title'], 
 $twitter_status = urlencode($twitter_status);
 
 // define meta tags
-$meta_title = $video['video_title'];
+$meta_title = $video['title_tag'] ? $video['title_tag'] : $video['video_title'];
 $video['excerpt'] = (empty($video['excerpt'])) ? $video['video_title'] : $video['excerpt'];
-$meta_description = generate_excerpt(str_replace('"', '&quot;', $video['excerpt']), 150) .'...';
+if($video['meta_description']){
+	$meta_description = $video['meta_description'];
+}else{	
+	$meta_description = generate_excerpt(str_replace('"', '&quot;', $video['excerpt']), 150) .'...';
+}
 
 $meta_keywords = '';
 if(is_array($tags_arr))
@@ -268,8 +272,8 @@ $smarty->assign('bin_rating_vote_value', bin_rating_user_has_voted($video['uniq_
 serve_preroll_ad('detail', $video);
 
 // --- DEFAULT SYSTEM FILES - DO NOT REMOVE --- //
-
 $smarty->assign('meta_title', htmlspecialchars($meta_title));
+$smarty->assign('allow_index', $video['allow_index']);
 $smarty->assign('meta_keywords', $meta_keywords);
 $smarty->assign('meta_description', $meta_description);
 $smarty->assign('template_dir', $template_f);

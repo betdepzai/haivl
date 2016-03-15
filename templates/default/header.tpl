@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=1024,maximum-scale=1.0">
 <title>{$meta_title}</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge,chrome=1">  
-{if $no_index == '1' || $smarty.const._DISABLE_INDEXING == '1'}
+{if $no_index == '1' || $smarty.const._DISABLE_INDEXING == '1' || $allow_index == 0}
 <meta name="robots" content="noindex,nofollow">
 <meta name="googlebot" content="noindex,nofollow">
 {/if}
@@ -158,6 +158,7 @@ var pm_video_data = {
 </head>
 {if $tpl_name == "video-category"}
 <body class="video-category catid-{$cat_id} page-{$gv_pagenumber}">
+
 {elseif $tpl_name == "video-watch"}
 <body class="video-watch videoid-{$video_data.id} author-{$video_data.author_user_id} source-{$video_data.source_id}{if $video_data.featured == 1} featured{/if}{if $video_data.restricted == 1} restricted{/if}">
 {elseif $tpl_name == "article-category"}
